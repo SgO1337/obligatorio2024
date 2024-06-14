@@ -25,4 +25,6 @@ public interface MyList<T> {
     String[] toArray();
 
     void setByIndex(int index, T value);
+
+    void reverse();
 }
