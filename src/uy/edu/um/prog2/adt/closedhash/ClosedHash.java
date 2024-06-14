@@ -8,5 +8,6 @@ public interface ClosedHash<K,V> {
     private void resize() {
 
     }
+    void changeValue(K key, V valor);
     String toString();
 }

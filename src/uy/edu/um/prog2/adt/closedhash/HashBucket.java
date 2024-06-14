@@ -32,4 +32,8 @@ public class HashBucket<K,V> {
     public String toString() {
         return "(" + this.key.toString() + ", " + this.value.toString() + ")";
     }
+
+    public void setValue(V valorNuevo) {
+        this.value = valorNuevo;
+    }
 }
