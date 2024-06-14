@@ -48,6 +48,7 @@ b. Tiempo de ejecucion:
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/6c2ea66a-1f6b-41da-969f-ca047978b215)
 
 3. Resultado:
+
    Para la medicion tomamos el peor caso posible, es decir tomamos como rango la primera fecha del csv hasta la ultima fecha.
    
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/9a2ce169-0e3d-418b-8ff7-7defd2ae7dba)
@@ -61,6 +62,7 @@ b. Tiempo de ejecucion:
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/5d7998cd-5f31-4d3e-b341-4a20439cd11a)
    
 6. Resultado:
+
    Para la medicion tomamos el peor caso posible, es decir tomamos como rango la primera fecha del csv hasta la ultima fecha.
    
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/6d0c5671-c2cf-45ec-83d0-dc270e08104b)
