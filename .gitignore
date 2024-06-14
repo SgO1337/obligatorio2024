@@ -29,4 +29,6 @@ bin/
 .DS_Store
 
 #el dataset
+universal_top_spotify_songs.csv
+universal_top_spotify_songs
 .csv

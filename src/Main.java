@@ -70,7 +70,7 @@ public class Main {
                         int tiempoMin = scanner.nextInt();
                         System.out.println("Ingrese el tiempo máximo: ");
                         int tiempoMax = scanner.nextInt();
-                        scanner.nextLine(); // Consumir la nueva línea
+                        scanner.nextLine();
                         if (tiempoMin <= 0 || tiempoMax <= 0) {
                             throw new Exception("El tiempo debe ser estrictamente positivo.");
                         }
