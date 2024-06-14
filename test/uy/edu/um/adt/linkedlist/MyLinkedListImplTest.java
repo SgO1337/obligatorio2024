@@ -58,6 +58,58 @@ public class MyLinkedListImplTest {
         Assert.assertEquals(1,testList.size());
     }
 
+    @Test
+    public void toArrayCasoVacioMyLinkedList() {
+        Assert.assertEquals(0,testList.toArray().length);
+    }
+
+    @Test
+    public void toArrayCasoNoVacioMyLinkedList() {
+        MyList<String> testListString = new MyLinkedListImpl<String>();
+        testListString.add("a");
+        testListString.add("b");
+        Assert.assertArrayEquals(new String[]{"a","b"},testListString.toArray());
+    }
+
+    @Test
+    public void setByIndexCasoValorIncoherenteMyLinkedList() {
+        testList.add(7);
+        testList.setByIndex(-1,4);
+    }
+
+    @Test
+    public void setByIndexCasoVacioMyLinkedList() {
+        testList.setByIndex(1,4);
+    }
+
+    @Test
+    public void setByIndexCasoNoVacioMyLinkedList() {
+        testList.add(3);
+        testList.add(4);
+        testList.add(15);
+        Assert.assertEquals(Integer.valueOf(4),testList.get(1));
+        testList.setByIndex(1,10);
+        Assert.assertEquals(Integer.valueOf(10),testList.get(1));
+        Assert.assertEquals(Integer.valueOf(3),testList.get(0));
+        Assert.assertEquals(Integer.valueOf(15),testList.get(2));
+    }
+
+    @Test
+    public void reverseCasoVacioMyLinkedList() {
+        testList.reverse();
+    }
+
+    @Test
+    public void reverseCasoNoVacioMyLinkedList() {
+        testList.add(4);
+        testList.add(15);
+        testList.add(6);
+        testList.reverse();
+        Assert.assertEquals(Integer.valueOf(6),testList.get(0));
+        Assert.assertEquals(Integer.valueOf(15),testList.get(1));
+        Assert.assertEquals(Integer.valueOf(4),testList.get(2));
+    }
+
     //Test particulares de queue
 
     @Test
@@ -165,5 +217,10 @@ public class MyLinkedListImplTest {
     public void sizeMyCircularLinkedList() {
         testCircularLinkedList.add(7);
         Assert.assertEquals(1,testCircularLinkedList.size());
+    }
+
+    @Test
+    public void CircularLinkedList() {
+
     }
 }
