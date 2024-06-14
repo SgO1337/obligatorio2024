@@ -17,3 +17,8 @@ El método parseInt convierte una cadena en un entero, lo cual elimina comillas 
 El método parseDouble convierte una cadena en un número flotante, eliminando comillas y caracteres innecesarios.
 
 El método parseCsvLine divide una línea del CSV en un arreglo de cadenas, considerando las comillas para manejar los campos con comas.
+# Medicion de la eficiencia de la carga masiva de datos:
+a. Memoria usada:
+![2](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/0e51e5bd-cf08-4f10-a794-5da3d46dd1f4)
+b. Tiempo de ejecucion: 
+![1](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/dc071a4b-3a01-4e2b-aae0-7bd51e2914b1)
