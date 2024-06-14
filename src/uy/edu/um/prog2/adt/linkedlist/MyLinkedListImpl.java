@@ -3,6 +3,11 @@ package uy.edu.um.prog2.adt.linkedlist;
 import uy.edu.um.prog2.adt.queue.*;
 import uy.edu.um.prog2.adt.stack.*;
 import uy.edu.um.prog2.adt.circularlinkedlist.*;
+import uy.edu.um.prog2.adt.circularlinkedlist.MyCircularLinkedList;
+import uy.edu.um.prog2.adt.queue.EmptyQueueException;
+import uy.edu.um.prog2.adt.queue.MyQueue;
+import uy.edu.um.prog2.adt.stack.EmptyStackException;
+import uy.edu.um.prog2.adt.stack.MyStack;
 
 public class MyLinkedListImpl<T> implements MyList<T>, MyQueue<T>, MyStack<T>, MyCircularLinkedList<T> {
 
@@ -267,5 +272,30 @@ public class MyLinkedListImpl<T> implements MyList<T>, MyQueue<T>, MyStack<T>, M
         }
         stringTemporal.append("]");
         return stringTemporal.toString();
+    }
+
+    public String[] toArray() {
+        String[] array = new String[size()];
+        Node<T> current = this.first;
+        int index = 0;
+        while (current != null) {
+            array[index++] = (String) current.getValue();
+            current = current.getNext();
+        }
+        return array;
+    }
+
+    public void setByIndex(int position, T value) {
+        int tempPosition = 0;
+        Node<T> temp = this.first;
+
+        while (temp != null && tempPosition != position) {
+            temp = temp.getNext();
+            tempPosition++;
+        }
+
+        if (tempPosition == position) {
+            temp.setValue(value);
+        }
     }
 }

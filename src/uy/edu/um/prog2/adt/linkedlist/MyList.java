@@ -21,4 +21,8 @@ public interface MyList<T> {
     void addToTheEnd(T value);
 
     void addToBeginning(T value);
+
+    String[] toArray();
+
+    void setByIndex(int index, T value);
 }
