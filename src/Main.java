@@ -37,10 +37,12 @@ public class Main {
                 }
                 switch (opcion) {
                     case 1:
+                        System.out.println("Ingrese el pais por codigo (UY,AR,US,etc): ");
+                        String paisConsulta1 = scanner.nextLine();
                         System.out.println("Ingrese la fecha (yyyy-mm-dd): ");
                         String fechaConsulta1 = scanner.nextLine();
                         validarFecha(fechaConsulta1);
-                        consultas.primeraConsulta("", fechaConsulta1);
+                        consultas.primeraConsulta(paisConsulta1, fechaConsulta1);
                         break;
                     case 2:
                         System.out.println("Ingrese la fecha (yyyy-mm-dd): ");
