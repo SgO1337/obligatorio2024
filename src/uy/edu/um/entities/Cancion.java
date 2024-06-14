@@ -3,19 +3,19 @@ package uy.edu.um.entities;
 import uy.edu.um.prog2.adt.linkedlist.MyLinkedListImpl;
 
 public class Cancion {
-    private String spotify_id;
+    private String spotifyId;
     private String name;
     private MyLinkedListImpl<String> artists;
-    private int daily_rank;
-    private int daily_movement;
-    private int weekly_movement;
+    private int dailyRank;
+    private int dailyMovement;
+    private int weeklyMovement;
     private String country;
-    private String snapshot_date;
+    private String snapshotDate;
     private int popularity;
-    private boolean is_explicit;
-    private double duration_ms;
-    private String album_name;
-    private String album_release_date;
+    private boolean isExplicit;
+    private double durationMs;
+    private String albumName;
+    private String albumReleaseDate;
     private double danceability;
     private double energy;
     private int key;
@@ -27,26 +27,26 @@ public class Cancion {
     private double liveness;
     private double valence;
     private double tempo;
-    private int time_signature;
+    private int timeSignature;
 
-    public Cancion(String spotify_id, String name, MyLinkedListImpl<String> artists, int daily_rank, int daily_movement,
-                   int weekly_movement, String country, String snapshot_date, int popularity, boolean is_explicit,
-                   double duration_ms, String album_name, String album_release_date, double danceability,
+    public Cancion(String spotifyId, String name, MyLinkedListImpl<String> artists, int dailyRank, int dailyMovement,
+                   int weeklyMovement, String country, String snapshotDate, int popularity, boolean isExplicit,
+                   double durationMs, String albumName, String albumReleaseDate, double danceability,
                    double energy, int key, double loudness, int mode, double speechiness, double acousticness,
-                   double instrumentalness, double liveness, double valence, double tempo, int time_signature) {
-        this.spotify_id = spotify_id;
+                   double instrumentalness, double liveness, double valence, double tempo, int timeSignature) {
+        this.spotifyId = spotifyId;
         this.name = name;
         this.artists = artists;
-        this.daily_rank = daily_rank;
-        this.daily_movement = daily_movement;
-        this.weekly_movement = weekly_movement;
+        this.dailyRank = dailyRank;
+        this.dailyMovement = dailyMovement;
+        this.weeklyMovement = weeklyMovement;
         this.country = country;
-        this.snapshot_date = snapshot_date;
+        this.snapshotDate = snapshotDate;
         this.popularity = popularity;
-        this.is_explicit = is_explicit;
-        this.duration_ms = duration_ms;
-        this.album_name = album_name;
-        this.album_release_date = album_release_date;
+        this.isExplicit = isExplicit;
+        this.durationMs = durationMs;
+        this.albumName = albumName;
+        this.albumReleaseDate = albumReleaseDate;
         this.danceability = danceability;
         this.energy = energy;
         this.key = key;
@@ -58,15 +58,15 @@ public class Cancion {
         this.liveness = liveness;
         this.valence = valence;
         this.tempo = tempo;
-        this.time_signature = time_signature;
+        this.timeSignature = timeSignature;
     }
 
     public String getSpotify_id() {
-        return spotify_id;
+        return spotifyId;
     }
 
-    public void setSpotify_id(String spotify_id) {
-        this.spotify_id = spotify_id;
+    public void setSpotify_id(String spotifyId) {
+        this.spotifyId = spotifyId;
     }
 
     public String getName() {
@@ -86,27 +86,27 @@ public class Cancion {
     }
 
     public int getDaily_rank() {
-        return daily_rank;
+        return dailyRank;
     }
 
-    public void setDaily_rank(int daily_rank) {
-        this.daily_rank = daily_rank;
+    public void setDaily_rank(int dailyRank) {
+        this.dailyRank = dailyRank;
     }
 
     public int getDaily_movement() {
-        return daily_movement;
+        return dailyMovement;
     }
 
-    public void setDaily_movement(int daily_movement) {
-        this.daily_movement = daily_movement;
+    public void setDaily_movement(int dailyMovement) {
+        this.dailyMovement = dailyMovement;
     }
 
     public int getWeekly_movement() {
-        return weekly_movement;
+        return weeklyMovement;
     }
 
-    public void setWeekly_movement(int weekly_movement) {
-        this.weekly_movement = weekly_movement;
+    public void setWeekly_movement(int weeklyMovement) {
+        this.weeklyMovement = weeklyMovement;
     }
 
     public String getCountry() {
@@ -118,11 +118,11 @@ public class Cancion {
     }
 
     public String getSnapshot_date() {
-        return snapshot_date;
+        return snapshotDate;
     }
 
-    public void setSnapshot_date(String snapshot_date) {
-        this.snapshot_date = snapshot_date;
+    public void setSnapshot_date(String snapshotDate) {
+        this.snapshotDate = snapshotDate;
     }
 
     public int getPopularity() {
@@ -134,35 +134,35 @@ public class Cancion {
     }
 
     public boolean isIs_explicit() {
-        return is_explicit;
+        return isExplicit;
     }
 
-    public void setIs_explicit(boolean is_explicit) {
-        this.is_explicit = is_explicit;
+    public void setIs_explicit(boolean isExplicit) {
+        this.isExplicit = isExplicit;
     }
 
     public double getDuration_ms() {
-        return duration_ms;
+        return durationMs;
     }
 
-    public void setDuration_ms(double duration_ms) {
-        this.duration_ms = duration_ms;
+    public void setDuration_ms(double durationMs) {
+        this.durationMs = durationMs;
     }
 
     public String getAlbum_name() {
-        return album_name;
+        return albumName;
     }
 
-    public void setAlbum_name(String album_name) {
-        this.album_name = album_name;
+    public void setAlbum_name(String albumName) {
+        this.albumName = albumName;
     }
 
     public String getAlbum_release_date() {
-        return album_release_date;
+        return albumReleaseDate;
     }
 
-    public void setAlbum_release_date(String album_release_date) {
-        this.album_release_date = album_release_date;
+    public void setAlbum_release_date(String albumReleaseDate) {
+        this.albumReleaseDate = albumReleaseDate;
     }
 
     public double getDanceability() {
@@ -254,10 +254,10 @@ public class Cancion {
     }
 
     public int getTime_signature() {
-        return time_signature;
+        return timeSignature;
     }
 
-    public void setTime_signature(int time_signature) {
-        this.time_signature = time_signature;
+    public void setTime_signature(int timeSignature) {
+        this.timeSignature = timeSignature;
     }
 }
