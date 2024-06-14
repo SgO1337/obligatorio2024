@@ -1,7 +1,7 @@
 # Obligatorio de programacion 2 
 ### Integrantes: Santiago Garcia, Rodrigo Quincke
 # Descripción de la carga masiva de datos:
-## Metodo principal:
+### Metodo principal:
 Para cargar los datos del csv, tenemos un objeto Cancion con un atributo por cada “columna” del csv (columna entre comillas porque es un coma-separated-file, es decir se separan por comas y no por columnas).
 Como salida nuestra clase CSVImport da una lista con dos objetos: uno es una lista de fechas únicas y el otro es un hash con clave fecha y como valor una lista de canciones de esa fecha, donde cada objeto Canción tiene todos los atributos de la línea del csv.
 Para leer el archivo csv, utilizamos la clase BufferedReader que lee el archivo línea por línea. La primera línea del archivo que contiene los nombres de los datos se saltea para importar solamente los datos.
