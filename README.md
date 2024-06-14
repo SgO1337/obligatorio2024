@@ -1,5 +1,7 @@
 # Obligatorio de programacion 2 
 ### Integrantes: Santiago Garcia, Rodrigo Quincke
+# Diagrama UML de la solucion brindada:
+![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/fd8fa8a1-6347-45b8-b911-324ccc6cba46)
 # Descripción de la carga masiva de datos:
 ### Metodo principal:
 Para cargar los datos del csv, tenemos un objeto Cancion con un atributo por cada “columna” del csv (columna entre comillas porque es un coma-separated-file, es decir se separan por comas y no por columnas).
