@@ -298,4 +298,23 @@ public class MyLinkedListImpl<T> implements MyList<T>, MyQueue<T>, MyStack<T>, M
             temp.setValue(value);
         }
     }
+
+    public void reverse() {
+
+        Node<T> previous = null;
+        Node<T> current = this.first;
+        Node<T> next = null;
+        this.last = this.first;
+
+        while (current != null) {
+            next = current.getNext();
+            current.setNext(previous);
+            previous = current;
+            current = next;
+        }
+
+        this.first = previous;
+    }
+
+
 }
