@@ -14,7 +14,7 @@ public class Consultas {
     MyLinkedListImpl<String> fechasUnicas;
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");//para la funcion del final
     public Consultas() {
-        MyLinkedListImpl<Object> canciones = CsvImport.importData("universal_top_spotify_songs.csv", 748804);
+        MyLinkedListImpl<Object> canciones = CSVImport.importData("universal_top_spotify_songs.csv", 748804);
         this.cancionesPorFecha = (ClosedHashImpl<String, MyLinkedListImpl<Cancion>>) canciones.get(0);
         this.fechasUnicas = (MyLinkedListImpl<String>) canciones.get(1);
     }
