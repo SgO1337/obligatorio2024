@@ -1,7 +1,9 @@
 # Obligatorio de programacion 2 
 ### Integrantes: Santiago Garcia, Rodrigo Quincke
 # Diagrama UML de la solucion brindada:
+
 ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/6387b40a-61cb-4163-9fdd-2fff88c8d514)
+
 # Descripción de la carga masiva de datos:
 ### Metodo principal:
 Para cargar los datos del csv, tenemos un objeto Cancion con un atributo por cada “columna” del csv (columna entre comillas porque es un coma-separated-file, es decir se separan por comas y no por columnas).
@@ -25,26 +27,24 @@ El método parseCsvLine divide una línea del CSV en un arreglo de cadenas, cons
 ### A modo de aclaracion, medimos tanto la memoria usada como el tiempo ejecutando el programa usando el Profiler del Intellij.
 ## Medicion de la eficiencia de la carga masiva de datos: 
 a. Memoria usada:
+
 ![2](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/0e51e5bd-cf08-4f10-a794-5da3d46dd1f4)
+
 b. Tiempo de ejecucion: 
+
 ![1](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/dc071a4b-3a01-4e2b-aae0-7bd51e2914b1)
+
 ## Medicion de la eficiencia de las consultas:
 1. Resultado:
    
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/6ff8b384-fb8e-4071-a77c-1c9b594dbd53)
 
-   a. Memoria usada:
-   No usa memoria, accede a elementos 
-   b. Tiempo de ejecucion:
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/fddfbe03-5a63-41cf-b1d6-44f31aa1b340)
 
 2. Resultado:
    
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/162ecba2-0420-4e49-998a-da68fbbdc116)
 
-   a. Memoria usada:
-   
-   b. Tiempo de ejecucion:
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/6c2ea66a-1f6b-41da-969f-ca047978b215)
 
 3. Resultado:
@@ -52,26 +52,20 @@ b. Tiempo de ejecucion:
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/9a2ce169-0e3d-418b-8ff7-7defd2ae7dba)
 
    Para la medicion tomamos el peor caso posible, es decir tomamos como rango la primera fecha del csv hasta la ultima fecha.
-   a. Memoria usada: 
    
-   b. Tiempo de ejecucion:
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/c01a109a-7c7b-4e32-acbb-d3546d291f7c)
 
 4. Resultado:
   
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/c9ddc866-2184-4f1e-a4ef-76dfee99cfb0)
 
-   a. Memoria usada: 
-   
-   b. Tiempo de ejecucion:
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/5d7998cd-5f31-4d3e-b341-4a20439cd11a)
    
 5. Resultado:
    
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/6d0c5671-c2cf-45ec-83d0-dc270e08104b)
+   
    (que a modo de observacion nos dice que hay 10515 canciones unicas/distintas en el csv)
    Para la medicion tomamos el peor caso posible, es decir tomamos como rango la primera fecha del csv hasta la ultima fecha.
-   a. Memoria usada:  
-   
-   b. Tiempo de ejecucion:
+
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/af3ccdbf-cd3e-40a9-b40e-e54055dacdc7)
