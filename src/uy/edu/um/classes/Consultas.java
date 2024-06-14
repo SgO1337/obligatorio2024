@@ -17,6 +17,7 @@ public class Consultas {
         MyLinkedListImpl<Object> canciones = CSVImport.importData("universal_top_spotify_songs.csv", 748804);
         this.cancionesPorFecha = (ClosedHashImpl<String, MyLinkedListImpl<Cancion>>) canciones.get(0);
         this.fechasUnicas = (MyLinkedListImpl<String>) canciones.get(1);
+        this.fechasUnicas.reverse(); //necesitamos las fechas de menor a mayor, pero en el archivo estan de mayor a menor
     }
     public void primeraConsulta(String pais, String fecha) { //faltan devolver algunas cosas
         int i = 0;
@@ -52,19 +53,22 @@ public class Consultas {
         ClosedHashImpl<String, Integer> cancionesOcurrencias = new ClosedHashImpl<>(100);
         MyLinkedListImpl<String> nombresCanciones = new MyLinkedListImpl<>();
         MyHeapImpl<String, Integer> top5 = new MyHeapImpl<String, Integer>(false);
+        ClosedHashImpl<String, String> idNombre = new ClosedHashImpl<>(100);
         do {
             cancionActual = listaCancionesEnFecha.get(i);
             if(cancionActual.getDaily_rank() < 51) {
-                if (cancionesOcurrencias.getValue(cancionActual.getName()) != null) {
-                    if(!nombresCanciones.contains(cancionActual.getName())) {
-                        nombresCanciones.add(cancionActual.getName());
+                if (cancionesOcurrencias.getValue(cancionActual.getSpotify_id()) != null) {
+                    if(!nombresCanciones.contains(cancionActual.getSpotify_id())) {
+                        idNombre.insertar(cancionActual.getSpotify_id(),cancionActual.getName());
+                        nombresCanciones.add(cancionActual.getSpotify_id());
                     }
-                    cancionesOcurrencias.changeValue(cancionActual.getName(), cancionesOcurrencias.getValue(cancionActual.getName()) + 1);
+                    cancionesOcurrencias.changeValue(cancionActual.getSpotify_id(), cancionesOcurrencias.getValue(cancionActual.getSpotify_id()) + 1);
                 } else {
-                    if(!nombresCanciones.contains(cancionActual.getName())) {
-                        nombresCanciones.add(cancionActual.getName());
+                    if(!nombresCanciones.contains(cancionActual.getSpotify_id())) {
+                        idNombre.insertar(cancionActual.getSpotify_id(),cancionActual.getName());
+                        nombresCanciones.add(cancionActual.getSpotify_id());
                     }
-                    cancionesOcurrencias.insertar(cancionActual.getName(), 1);
+                    cancionesOcurrencias.insertar(cancionActual.getSpotify_id(), 1);
                 }
             }
             i++;
@@ -74,7 +78,7 @@ public class Consultas {
         }
         System.out.println("TOP 5: ");
         for(int j = 0;j<5;j++) {
-            System.out.println((j+1)+". "+top5.get().getKey()+" con "+top5.get().getValue()+" ocurrencias.");
+            System.out.println((j+1)+". "+idNombre.getValue(top5.get().getKey())+" con "+top5.get().getValue()+" ocurrencias.");
             top5.delete();
         }
     }
@@ -114,8 +118,8 @@ public class Consultas {
         for(int j = 0;j<artistasSingulares.size();j++) {
             top7.insert(artistasSingulares.get(j),artistasOcurrencias.getValue(artistasSingulares.get(j)));
         }
-        System.out.println("TOP 5: ");
-        for(int j = 0;j<5;j++) {
+        System.out.println("TOP 7: ");
+        for(int j = 0;j<7;j++) {
             System.out.println((j+1)+". "+top7.get().getKey()+" con "+top7.get().getValue()+" ocurrencias.");
             top7.delete();
         }
@@ -149,8 +153,8 @@ public class Consultas {
             listaCancionesEnFecha = cancionesPorFecha.getValue(fechas.get(k));
             do {
                 cancionActual = listaCancionesEnFecha.get(i);
-                if (!cancionesUnicas.contains(cancionActual.getName()) && cancionActual.getTempo() >= tempo1 && cancionActual.getTempo() <= tempo2) {
-                    cancionesUnicas.add(cancionActual.getName());
+                if (!cancionesUnicas.contains(cancionActual.getSpotify_id()) && cancionActual.getTempo() >= tempo1 && cancionActual.getTempo() <= tempo2) {
+                    cancionesUnicas.add(cancionActual.getSpotify_id());
                     cantidadCanciones++;
                 }
                 i++;
