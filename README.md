@@ -9,7 +9,7 @@ Con los datos extraídos, se crea una instancia de Cancion. Este objeto tiene to
 Para almacenar las canciones en el hash cerrado, se verifica si ya existe una lista de canciones para la fecha de la instantánea (snapshotDate). Si no existe, se crea una nueva lista, se agrega la canción y se inserta en el hash. Si ya existe, la canción se añade a la lista existente, garantizando que todas las canciones de una misma fecha estén agrupadas.
 El proceso incluye manejo de excepciones para capturar y manejar problemas de entrada/salida (IOException) y claves duplicadas (DuplicateKey). Esto asegura que el programa pueda manejar errores de manera consistente.
 Finalmente, se agrega el hash cerrado y la lista de fechas al resultado, que se devuelve como una lista resultado con el hash de canciones y las fechas únicas.
-# Métodos auxiliares:
+### Métodos auxiliares:
 El método parseArtists convierte una cadena de artistas en una lista enlazada de nombres de artistas, facilitando el manejo de múltiples artistas por canción.
 
 El método parseInt convierte una cadena en un entero, lo cual elimina comillas y caracteres innecesarios.
