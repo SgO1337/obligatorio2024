@@ -30,30 +30,35 @@ b. Tiempo de ejecucion:
 ![1](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/dc071a4b-3a01-4e2b-aae0-7bd51e2914b1)
 ## Medicion de la eficiencia de las consultas:
 1. Resultado:
+   
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/6b9183bd-536a-451c-8cb6-4e27f3ef3d5e)
    a.
    
    b.
   
-2. Resultado:
+3. Resultado:
+   
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/162ecba2-0420-4e49-998a-da68fbbdc116)
    a.
    
    b.
    
-3. Resultado:
+5. Resultado:
+   
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/9a2ce169-0e3d-418b-8ff7-7defd2ae7dba)
    a. (Peor caso posible, es decir tomamos como rango la primera fecha del csv hasta la ultima fecha)
    
    b.
    
-4. Resultado:
+7. Resultado:
+  
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/c9ddc866-2184-4f1e-a4ef-76dfee99cfb0)
    a.
    
    b.
    
-5. Resultado:
+8. Resultado:
+   
    ![image](https://github.com/SgO1337/obligatorio_prog2_sgarcia1_rquincke/assets/69167503/6d0c5671-c2cf-45ec-83d0-dc270e08104b)
    (que a modo de observacion nos dice que hay 10515 canciones unicas/distintas en el csv)
    a. (Peor caso posible, es decir tomamos como rango la primera fecha del csv hasta la ultima fecha y rango de 1 a 250, es decir aceptamos todas las canciones)
