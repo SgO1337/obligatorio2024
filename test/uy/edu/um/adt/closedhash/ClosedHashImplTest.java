@@ -103,6 +103,29 @@ public class ClosedHashImplTest {
         Assert.assertEquals(0,testClosedHashVacio.getSize());
     }
 
+    @Test
+    public void testChangeValueVacio() {
+        ClosedHashImpl<Integer, String> testClosedHashVacio = new ClosedHashImpl<>(10);
+        testClosedHashVacio.changeValue(4,"Test");
+    }
+
+    @Test
+    public void testChangeValueNoVacio() {
+        testClosedHashInteger.changeValue(777,"Test");
+        Assert.assertEquals("Test",testClosedHashInteger.getValue(777));
+    }
+
+    @Test
+    public void testChangeValueNoVacioNotFound() {
+        testClosedHashInteger.changeValue(2456,"Test");
+        Assert.assertNull(testClosedHashInteger.getValue(2456));
+        Assert.assertEquals("Bob Esponja",testClosedHashInteger.getValue(100));
+        Assert.assertEquals("Agente P",testClosedHashInteger.getValue(777));
+        Assert.assertEquals("Homero Simpson",testClosedHashInteger.getValue(555));
+        Assert.assertEquals("Calamardo",testClosedHashInteger.getValue(321));
+        Assert.assertEquals("Patricio Estrella",testClosedHashInteger.getValue(123));
+    }
+
     //Estos tests son para keys String
     //Los comentarios al lado de algunas inserciones son para facilitar la lectura y pasaje a ASCII de las keys.
     @Test
@@ -175,5 +198,28 @@ public class ClosedHashImplTest {
     public void testStringGetSizeVacio() {
         ClosedHashImpl<String, String> testClosedHashVacio = new ClosedHashImpl<>(10);
         Assert.assertEquals(0,testClosedHashVacio.getSize());
+    }
+
+    @Test
+    public void testStringChangeValueVacio() {
+        ClosedHashImpl<String, String> testClosedHashVacio = new ClosedHashImpl<>(10);
+        testClosedHashVacio.changeValue("Test","Test");
+    }
+
+    @Test
+    public void testStringChangeValueNoVacio() {
+        testClosedHashString.changeValue("m","Test");
+        Assert.assertEquals("Test",testClosedHashString.getValue("m"));
+    }
+
+    @Test
+    public void testStringChangeValueNoVacioNotFound() {
+        testClosedHashString.changeValue("2456","Test");
+        Assert.assertNull(testClosedHashString.getValue("2456"));
+        Assert.assertEquals("Bob Esponja",testClosedHashString.getValue("a"));
+        Assert.assertEquals("Agente P",testClosedHashString.getValue("m"));
+        Assert.assertEquals("Homero Simpson",testClosedHashString.getValue("k"));
+        Assert.assertEquals("Calamardo",testClosedHashString.getValue("c"));
+        Assert.assertEquals("Patricio Estrella",testClosedHashString.getValue("b"));
     }
 }
